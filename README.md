@@ -54,3 +54,20 @@ timestamp_in_ms X died
   <li>A message announcing a philosopher died should be displayed no more than 10 ms after the actual death of the philosopher.</li>
   <li>Again, philosophers should avoid dying!</li>
 </ul>
+<h2>Mandatory Part</h2>
+<ul>
+  <li>Each philosopher should be a thread.</li>
+  <li>There is one fork between each pair of philosophers. Therefore, if there are several philosophers, each philosopher has a fork on their left side and a fork on their right side. If there is only one philosopher, there should be only one fork on the table.</li>
+  <li>To prevent philosophers from duplicating forks, you should protect the forks state with a mutex for each of them.</li>
+</ul>
+
+<h2>Bonus Part</h2>
+<ul>
+  <li>The program of the bonus part takes the same arguments as the mandatory program. It has to comply with the requirements of the Global rules chapter.</li>
+  <li>Specific rules for the bonus part:</li>
+  <ul>
+    <li>All the forks are put in the middle of the table.</li>
+    <li>They have no states in memory but the number of available forks is represented by a semaphore.</li>
+    <li>Each philosopher should be a process. But the main process should not be a philosopher.</li>
+  </ul>
+</ul>
