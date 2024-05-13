@@ -1,13 +1,5 @@
 # <h1 align="center">PHILOSOPHERS</h1>
 
-<style>
-  /* CSS for centering and coloring the text */
-  h1 {
-    color: blue; /* Setting the color to blue */
-    text-align: center; /* Centering the text */
-  }
-</style>
-
 <div align="center">
   <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*kTNv4zAJfdhvM9l0LiwUaA.png" />
 </div>
