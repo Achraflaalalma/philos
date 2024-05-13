@@ -21,19 +21,27 @@ In the realm of computer science, particularly in the study of concurrent progra
 
 ### Rules to Follow
 ---
+<h2>Program Arguments</h2>
+<p>Below are the program arguments required for the simulation:</p>
+<pre>
+<code>
+number_of_philosophers time_to_die time_to_eat time_to_sleep [number_of_times_each_philosopher_must_eat]
+</code>
+</pre>
+
 <ul>
-  <li>Your program(s) should take the following arguments:</li>
-  <pre>
-    <li>number_of_philosophers</li>
-    <li>time_to_die (in milliseconds)</li>
-    <li>time_to_eat (in milliseconds)</li>
-    <li>time_to_sleep (in milliseconds)</li>
-    <li>[number_of_times_each_philosopher_must_eat] (optional)</li>
-  </pre>
-<ul/>
+  <li><strong>number_of_philosophers:</strong> The number of philosophers and also the number of forks.</li>
+  <li><strong>time_to_die (in milliseconds):</strong> If a philosopher doesn’t start eating time_to_die milliseconds since the beginning of their last meal or the beginning of the simulation, they die.</li>
+  <li><strong>time_to_eat (in milliseconds):</strong> The time it takes for a philosopher to eat. During that time, they will need to hold two forks.</li>
+  <li><strong>time_to_sleep (in milliseconds):</strong> The time a philosopher will spend sleeping.</li>
+  <li><strong>number_of_times_each_philosopher_must_eat (optional argument):</strong> If all philosophers have eaten at least number_of_times_each_philosopher_must_eat times, the simulation stops. If not specified, the simulation stops when a philosopher dies.</li>
+</ul>
+</pre>
+
+<ul>
   <li>Each philosopher has a number ranging from 1 to number_of_philosophers.</li>
   <li>Philosopher number 1 sits next to philosopher number number_of_philosophers. Any other philosopher number N sits between philosopher number N - 1 and philosopher number N + 1.</li>
-
+<ul/>
 <li>Any state change of a philosopher must be formatted as follows:</li>
 <pre>
 <code>
