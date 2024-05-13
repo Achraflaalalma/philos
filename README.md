@@ -18,3 +18,36 @@ In the realm of computer science, particularly in the study of concurrent progra
   <li>Philosophers don’t know if another philosopher is about to die.</li>
   <li>No need to say that philosophers should avoid dying!</li>
 </ul>
+
+### Rules to Follow
+---
+<h2>Global Rules</h2>
+<ul>
+  <li>Your program(s) should take the following arguments:</li>
+  <ul>
+    <li>number_of_philosophers</li>
+    <li>time_to_die (in milliseconds)</li>
+    <li>time_to_eat (in milliseconds)</li>
+    <li>time_to_sleep (in milliseconds)</li>
+    <li>[number_of_times_each_philosopher_must_eat] (optional)</li>
+  </ul>
+  <li>Each philosopher has a number ranging from 1 to number_of_philosophers.</li>
+  <li>Philosopher number 1 sits next to philosopher number number_of_philosophers. Any other philosopher number N sits between philosopher number N - 1 and philosopher number N + 1.</li>
+</ul>
+
+<h2>About</h2>
+<p>I never thought philosophy would be so deadly.</p>
+
+<h2>Logging</h2>
+<ul>
+  <li>Any state change of a philosopher must be formatted as follows:</li>
+  <ul>
+    <li>timestamp_in_ms X has taken a fork</li>
+    <li>timestamp_in_ms X is eating</li>
+    <li>timestamp_in_ms X is sleeping</li>
+    <li>timestamp_in_ms X is thinking</li>
+    <li>timestamp_in_ms X died</li>
+  </ul>
+  <li>A displayed state message should not be mixed up with another message.</li>
+  <li>A message announcing a philosopher died should be displayed no more than 10 ms after the actual death of the philosopher.</li>
+</ul>
