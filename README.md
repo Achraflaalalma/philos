@@ -32,14 +32,8 @@ In the realm of computer science, particularly in the study of concurrent progra
   </ul>
   <li>Each philosopher has a number ranging from 1 to number_of_philosophers.</li>
   <li>Philosopher number 1 sits next to philosopher number number_of_philosophers. Any other philosopher number N sits between philosopher number N - 1 and philosopher number N + 1.</li>
-</ul>
 
-<h2>About</h2>
-<p>I never thought philosophy would be so deadly.</p>
-
-<h2>Logging</h2>
-<ul>
-  <li>Any state change of a philosopher must be formatted as follows:</li>
+<li>Any state change of a philosopher must be formatted as follows:</li>
   <ul>
     <li>timestamp_in_ms X has taken a fork</li>
     <li>timestamp_in_ms X is eating</li>
@@ -49,4 +43,6 @@ In the realm of computer science, particularly in the study of concurrent progra
   </ul>
   <li>A displayed state message should not be mixed up with another message.</li>
   <li>A message announcing a philosopher died should be displayed no more than 10 ms after the actual death of the philosopher.</li>
+</ul>
+
 </ul>
