@@ -1,5 +1,5 @@
 # <h1 align="center">PHILOSOPHERS</h1>
-<img align="center" src="[/Users/alaalalm/Desktop/philo_image.png](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*kTNv4zAJfdhvM9l0LiwUaA.png)" />
+<img align="center" src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*kTNv4zAJfdhvM9l0LiwUaA.png" />
 ### Introduction
 ---
 In the realm of computer science, particularly in the study of concurrent programming and synchronization, the 'Dining Philosophers Problem' stands as a classic illustration of the challenges inherent in resource allocation and deadlock avoidance. Originating from a simple thought experiment involving philosophers seated around a dining table, this problem serves as a poignant metaphor for the complexities encountered in designing robust, multi-threaded software systems. In this introduction, we delve into the essence of the Dining Philosophers Problem, exploring its significance, theoretical underpinnings, and practical implications in modern computing.
