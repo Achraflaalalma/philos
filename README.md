@@ -21,7 +21,6 @@ In the realm of computer science, particularly in the study of concurrent progra
 
 ### Rules to Follow
 ---
-<h2>Global Rules</h2>
 <ul>
   <li>Your program(s) should take the following arguments:</li>
   <ul>
