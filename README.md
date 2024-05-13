@@ -30,6 +30,7 @@ In the realm of computer science, particularly in the study of concurrent progra
     <li>time_to_sleep (in milliseconds)</li>
     <li>[number_of_times_each_philosopher_must_eat] (optional)</li>
   </pre>
+<ul/>
   <li>Each philosopher has a number ranging from 1 to number_of_philosophers.</li>
   <li>Philosopher number 1 sits next to philosopher number number_of_philosophers. Any other philosopher number N sits between philosopher number N - 1 and philosopher number N + 1.</li>
 
