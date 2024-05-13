@@ -21,7 +21,6 @@ In the realm of computer science, particularly in the study of concurrent progra
 
 ### Rules to Follow
 ---
-<h2>Program Arguments</h2>
 <p>Below are the program arguments required for the simulation:</p>
 <pre>
 <code>
@@ -41,8 +40,8 @@ number_of_philosophers time_to_die time_to_eat time_to_sleep [number_of_times_ea
 <ul>
   <li>Each philosopher has a number ranging from 1 to number_of_philosophers.</li>
   <li>Philosopher number 1 sits next to philosopher number number_of_philosophers. Any other philosopher number N sits between philosopher number N - 1 and philosopher number N + 1.</li>
+  <li>Any state change of a philosopher must be formatted as follows:</li>
 <ul/>
-<li>Any state change of a philosopher must be formatted as follows:</li>
 <pre>
 <code>
 timestamp_in_ms X has taken a fork
@@ -52,9 +51,8 @@ timestamp_in_ms X is thinking
 timestamp_in_ms X died
 </code>
 </pre>
+<ul>
   <li>A displayed state message should not be mixed up with another message.</li>
   <li>A message announcing a philosopher died should be displayed no more than 10 ms after the actual death of the philosopher.</li>
   <li>Again, philosophers should avoid dying!</li>
-</ul>
-
 </ul>
