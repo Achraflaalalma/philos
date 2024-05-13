@@ -1,5 +1,8 @@
 # <h1 align="center">PHILOSOPHERS</h1>
-<img align="center" src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*kTNv4zAJfdhvM9l0LiwUaA.png" />
+
+<div align="center">
+  <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*kTNv4zAJfdhvM9l0LiwUaA.png" />
+</div>
 
 ### Introduction
 ---
