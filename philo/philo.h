@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 09:06:30 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/12 19:54:22 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/14 14:55:33 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,12 @@ struct s_table
 	long			time_to_sleep;
 	long			nfo_each_philo_must_eat;
 	long			start;
+	int				philo_died;
 	t_philo			*philo;
 	pthread_mutex_t	*forks;
 	pthread_mutex_t	print;
 	pthread_mutex_t	lock;
+	pthread_mutex_t	death;
 };
 
 struct s_philo
@@ -44,6 +46,7 @@ struct s_philo
 	long			id;
 	long			last_meal;
 	long			meals;
+	int				is_dead;
 	pthread_t		thread;
 	pthread_mutex_t	*left_fork;
 	pthread_mutex_t	*right_fork;
