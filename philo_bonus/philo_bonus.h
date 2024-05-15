@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 09:06:30 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/12 16:08:03 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/15 12:08:12 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ struct s_table
 	long			start;
 	sem_t			*forks;
 	sem_t			*print;
+	sem_t			*lock;
 	t_philo			*philo;
 };
 

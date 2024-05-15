@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:46:04 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/14 23:40:00 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/15 09:56:33 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int	init_philo(t_table *table)
 	{
 		(1) && (table->philo[i].id = i + 1, table->philo[i].meals = 0);
 		table->philo[i].last_meal = get_time();
-		table->philo[i].is_dead = 0;
 		table->philo[i].left_fork = &table->forks[i];
 		table->philo[i].right_fork = &table->forks[(i + 1)
 			% table->number_of_philos];

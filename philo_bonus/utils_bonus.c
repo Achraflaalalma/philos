@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:42:55 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/12 18:40:13 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/15 10:06:18 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ void	freeall(t_table *table)
 {
 	sem_close(table->forks);
 	sem_close(table->print);
+	sem_close(table->lock);
 	sem_unlink("forks");
 	sem_unlink("print");
+	sem_unlink("lock");
 }
 
 unsigned long	get_time(void)
