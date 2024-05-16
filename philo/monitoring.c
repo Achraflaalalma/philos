@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:47:24 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/14 23:39:46 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/16 11:49:37 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int	check_death(t_table *table)
 		pthread_mutex_unlock(&table->lock);
 		if (loop_over_philos(table))
 			return (1);
+		usleep(100);
 	}
 	return (0);
 }

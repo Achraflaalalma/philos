@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 09:06:30 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/14 14:55:33 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/16 11:21:15 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,6 @@ void			ft_usleep(long ms);
 long			ft_atoi(const char *str);
 unsigned long	get_time(void);
 int				start_simulation(t_table *table);
+int				destroy_print(t_table *table);
+int				destroy_all(t_table *table, long i);
 #endif

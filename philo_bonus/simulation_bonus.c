@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 16:00:40 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/15 11:53:31 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/16 12:38:49 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,10 @@ int	start_simulation(t_table *table)
 		return (1);
 	table->philo = malloc(sizeof(t_philo) * table->number_of_philos);
 	if (!table->philo)
+	{
+		free(pid);
 		return (1);
+	}
 	i = -1;
 	while (++i < table->number_of_philos)
 	{
@@ -54,5 +57,6 @@ int	start_simulation(t_table *table)
 			philo_life(table->philo + i);
 	}
 	wait_pids(pid, table->number_of_philos);
+	(1) && (free(pid), free(table->philo), i = -1);
 	return (0);
 }

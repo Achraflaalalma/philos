@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 09:06:30 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/15 12:08:12 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/16 12:30:15 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ int				check_death(t_philo *philo);
 int				initialize_data(t_table *table, char **argv);
 void			init_philo(t_philo *philo, t_table *table, int i);
 int				start_simulation(t_table *table);
+void			handle_semaphore(t_table *table, int flag);
 
 #endif

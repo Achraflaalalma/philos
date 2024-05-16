@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:46:04 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/15 09:56:33 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/16 11:21:16 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ int	init_philo(t_table *table)
 {
 	long	i;
 
-	table->philo = malloc(sizeof(t_philo) * table->number_of_philos);
-	table->forks = malloc(sizeof(pthread_mutex_t) * table->number_of_philos);
-	if (!table->forks || !table->philo)
+	if (pthread_mutex_init(&table->print, NULL))
 		return (1);
+	if (pthread_mutex_init(&table->lock, NULL))
+		return (destroy_print(table));
 	i = -1;
 	while (++i < table->number_of_philos)
 	{
 		if (pthread_mutex_init(&table->forks[i], NULL))
-			return (1);
+			return (destroy_all(table, i));
 	}
 	i = -1;
 	while (++i < table->number_of_philos)
@@ -53,14 +53,16 @@ int	initialize_data(t_table *table, char **argv)
 		|| (argv[5] && table->nfo_each_philo_must_eat <= 0)
 		|| table->number_of_philos > 200)
 	{
-		freeall(table);
+		printf("Invalid arguments\n");
 		return (1);
 	}
-	if (pthread_mutex_init(&table->print, NULL))
+	table->philo = malloc(sizeof(t_philo) * table->number_of_philos);
+	if (!table->philo)
 		return (1);
-	if (pthread_mutex_init(&table->lock, NULL))
+	table->forks = malloc(sizeof(pthread_mutex_t) * table->number_of_philos);
+	if (!table->forks)
 	{
-		pthread_mutex_destroy(&table->print);
+		free(table->philo);
 		return (1);
 	}
 	return (0);

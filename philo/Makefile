@@ -1,5 +1,5 @@
 CC = cc 
-CFLAGS = -Wall -Wextra -Werror -g -fsanitize=thread
+CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 AR = ar rc
 HEADER = philo.h

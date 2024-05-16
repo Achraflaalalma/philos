@@ -6,11 +6,26 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:42:55 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/14 13:13:32 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/16 12:39:57 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
+
+int	destroy_print(t_table *table)
+{
+	pthread_mutex_destroy(&table->print);
+	return (1);
+}
+
+int	destroy_all(t_table *table, long i)
+{
+	while (--i >= 0)
+		pthread_mutex_destroy(&table->forks[i]);
+	pthread_mutex_destroy(&table->print);
+	pthread_mutex_destroy(&table->lock);
+	return (1);
+}
 
 void	freeall(t_table *table)
 {
@@ -21,6 +36,8 @@ void	freeall(t_table *table)
 		pthread_mutex_destroy(&table->forks[i]);
 	pthread_mutex_destroy(&table->print);
 	pthread_mutex_destroy(&table->lock);
+	free(table->philo);
+	free(table->forks);
 }
 
 unsigned long	get_time(void)
