@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 09:06:00 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/16 14:28:57 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/16 15:14:09 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ int	main(int argc, char **argv)
 	t_table	table;
 
 	if (argc != 5 && argc != 6)
+	{
+		printf("Invalid arguments\n");
 		return (1);
+	}
 	if (initialize_data(&table, argv))
 		return (1);
 	if (init_philo(&table))
