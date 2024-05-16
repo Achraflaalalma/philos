@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:59:26 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/16 12:40:16 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/16 14:30:49 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ int	arguments_are_not_valid(t_table *table, char **argv)
 		|| table->time_to_eat < 60 || table->time_to_sleep < 60
 		|| (argv[5] && table->nfo_each_philo_must_eat <= 0)
 		|| table->number_of_philos > 200)
+	{
+		printf("Invalid arguments\n");
 		return (1);
+	}
 	return (0);
 }
 
@@ -33,12 +36,9 @@ int	initialize_data(t_table *table, char **argv)
 		table->nfo_each_philo_must_eat = ft_atoi(argv[5]);
 	if (arguments_are_not_valid(table, argv))
 		return (1);
-	if (sem_unlink("forks") == -1)
-		return (1);
-	if (sem_unlink("print") == -1)
-		return (1);
-	if (sem_unlink("lock") == -1)
-		return (1);
+	sem_unlink("print");
+	sem_unlink("lock");
+	sem_unlink("forks");
 	table->print = sem_open("print", O_CREAT, 0666, 1);
 	if (!table->print)
 		return (1);
