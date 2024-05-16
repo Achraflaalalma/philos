@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 16:00:04 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/15 14:19:17 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/16 14:39:39 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ int	check_death(t_philo *philo)
 			exit(EXIT_FAILURE);
 		}
 		sem_post(philo->table->lock);
+		usleep(100);
 	}
 }
